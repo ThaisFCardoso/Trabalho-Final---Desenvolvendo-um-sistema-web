@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Variáveis */
 :root {
   background-color: #F9F9F9; /* Default background */
   color: #333333; /* Default text */
