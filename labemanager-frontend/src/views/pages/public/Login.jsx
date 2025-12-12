@@ -4,7 +4,7 @@ import { useAuth } from '../../../context/AuthContext';
 
 const Login = () => {
   const { login } = useAuth();
-  const navigate = useNavigate(); // Hook for navigation
+  const navigate = useNavigate(); // Hook para navegação
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -110,7 +110,7 @@ const Login = () => {
               <span className="text-sm font-bold mb-1 text-black">Não tem conta?</span>
               <button
                 type="button"
-                onClick={() => navigate('/cadastro')} // Using navigate instead of Link for button uniformity
+                onClick={() => navigate('/cadastro')}
                 className="w-full bg-[#AEE2EA] border-2 border-black h-14 rounded-full text-lg font-bold text-black hover:bg-[#9ddce6] transition shadow-[0_4px_0_0_rgba(0,0,0,1)] active:shadow-none active:translate-y-1"
               >
                 Cadastrar
@@ -119,11 +119,6 @@ const Login = () => {
 
           </div>
         </form>
-
-        {/* Divider ou Seção redes sociais (REMOVIDO conforme pedido) */}
-        {/* <div className="mt-12 text-center text-gray-500 font-bold">Ou entre com</div> */}
-        {/* Ícones de redes sociais removidos */}
-
       </div>
     </div>
   );
