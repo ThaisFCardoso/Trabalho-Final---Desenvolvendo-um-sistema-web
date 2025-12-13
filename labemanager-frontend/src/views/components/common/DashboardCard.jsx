@@ -10,19 +10,14 @@ const DashboardCard = ({
   hasCRUD,
   isReport,
   isFinance,
-  circles = [], // Array of content for circles
-  variant = 'default' // 'default' | 'small' | 'wide'
+  circles = [], // Array do conteudo dos circulos
+  variant = 'default' 
 }) => {
 
   const destination = route || '#';
 
-  // Base classes for the card container
+  // Classes do conteiner dos cards
   const baseCardClasses = "bg-white border-2 border-black rounded-[30px] overflow-hidden flex flex-col relative transition-transform hover:-translate-y-1 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]";
-
-  // Height classes based on content/variant
-  // 'default' (tall with circles) -> h-[260px]
-  // 'small'  (Logistics, Finance, Calendar) -> h-[80px] or auto
-  // 'wide'   (Report) -> w-full
 
   const heightClass = variant === 'small' ? 'h-[90px]' : 'min-h-[280px]';
 
