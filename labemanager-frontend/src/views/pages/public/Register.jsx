@@ -138,7 +138,7 @@ const Register = () => {
           {/* Mensagem de Erro */}
           {error && <p className="text-red-500 font-bold text-center bg-red-50 p-2 rounded-lg border-2 border-red-200">{error}</p>}
 
-          {/* Seletor de ROLE (Participante/Organizador) */}
+          {/* Seletor de ROLES (Participante/Organizador) */}
           <div>
             <span className="block text-xl font-bold mb-2 text-black">Eu sou:</span>
             <div className="flex gap-4">

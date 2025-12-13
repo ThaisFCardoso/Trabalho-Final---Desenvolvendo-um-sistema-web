@@ -26,7 +26,7 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-sm border-b border-gray-100 relative">
-      {/* Main Bar */}
+      {/* barra principal */}
       <div className="flex justify-between items-center px-8 py-4">
         {/* Logo */}
         <div className="text-2xl font-bold text-lampi-dark tracking-tight">
@@ -40,7 +40,7 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Desktop Nav (Hidden on Mobile) */}
+        {/* Nav para o Desktop */}
         <nav className="hidden md:flex items-center">
           <Link to="/dashboard" className={linkClass('/dashboard')}>Laboratório</Link>
           <Link to="/membros" className={linkClass('/membros')}>Membros</Link>
@@ -58,7 +58,7 @@ const Header = () => {
         </nav>
       </div>
 
-      {/* Mobile Nav (Dropdown) */}
+      {/* Nav para o mobile */}
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-100 shadow-md absolute w-full z-50">
           <nav className="flex flex-col py-4">
