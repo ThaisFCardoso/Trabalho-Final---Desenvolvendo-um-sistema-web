@@ -1,16 +1,5 @@
-# React + Vite
+Este template fornece uma configuração mínima para fazer o React funcionar com o Vite, incluindo HMR (Hot Module Replacement) e algumas regras do ESLint. Atualmente, dois plugins oficiais estão disponíveis. O plugin @vitejs/plugin-react utiliza o Babel (ou o oxc quando usado em conjunto com o rolldown-vite) para oferecer o recurso de Fast Refresh. Já o plugin @vitejs/plugin-react-swc utiliza o SWC para fornecer o Fast Refresh, priorizando maior desempenho durante o desenvolvimento.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O React Compiler não vem habilitado neste template devido ao seu impacto no desempenho tanto durante o desenvolvimento quanto no processo de build. Caso seja necessário utilizá-lo, é possível adicioná-lo seguindo a documentação oficial do React, que explica o processo de instalação e configuração.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Para expandir a configuração do ESLint, especialmente em aplicações destinadas a ambientes de produção, recomenda-se o uso do TypeScript com regras de linting sensíveis a tipos. Para isso, é possível utilizar o template React com TypeScript disponibilizado pelo Vite, que contém orientações detalhadas sobre como integrar o TypeScript e o typescript-eslint ao projeto, garantindo uma análise de código mais robusta e segura.

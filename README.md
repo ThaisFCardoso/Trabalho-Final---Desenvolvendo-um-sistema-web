@@ -1,52 +1,5 @@
-# LabeManager - Project Documentation
+Este projeto está organizado como um monorepo, contendo tanto a aplicação Frontend quanto a Backend. A estrutura do projeto é composta por uma pasta principal que abriga duas aplicações distintas. A pasta labemanager-frontend contém a aplicação React criada com Vite, onde o diretório src concentra os componentes reutilizáveis da interface, as páginas da aplicação, a integração com a API e o gerenciamento de estado relacionado à autenticação. O arquivo package.json é responsável por armazenar as dependências e os scripts do Frontend. Já a pasta labemanager-backend contém a aplicação Node.js desenvolvida com Express. Dentro dela, o diretório src é organizado em configurações do banco de dados, controladores responsáveis pela lógica das requisições seguindo o padrão MVC, modelos que realizam as operações com o banco de dados e as rotas da API. A pasta data armazena o arquivo do banco de dados SQLite, e o arquivo server.js funciona como ponto de entrada da aplicação Backend.
 
-This project is organized as a monorepo containing both the Frontend and Backend applications.
+O Frontend está configurado para ser publicado no GitHub Pages. No entanto, o Backend não pode ser executado nessa plataforma e precisa ser hospedado em um serviço específico para aplicações de servidor, como Render, Railway ou uma VPS. Para preparar o deploy do Frontend, é necessário acessar o arquivo labemanager-frontend/package.json e atualizar o campo "homepage" com a URL correspondente ao usuário e repositório do GitHub. Após essa configuração, o deploy do Frontend pode ser realizado executando o comando npm run deploy no terminal dentro da pasta labemanager-frontend. Esse processo gera a build do projeto e a publica automaticamente na branch gh-pages.
 
-## Project Structure
-
-```
-Projeto-principal/
-├── labemanager-frontend/   # React Application (Vite)
-│   ├── src/
-│   │   ├── components/     # Reusable UI Components
-│   │   ├── pages/          # Application Pages
-│   │   ├── api/            # API Integration
-│   │   └── context/        # State Management (Auth)
-│   └── package.json        # Frontend Dependencies & Scripts
-│
-└── labemanager-backend/    # Node.js Application (Express)
-    ├── src/
-    │   ├── config/         # Database Configuration
-    │   ├── controllers/    # Request Logic (MVC Controller)
-    │   ├── models/         # Database Operations (MVC Model)
-    │   └── routes/         # API Routes (MVC View/Route)
-    ├── data/               # SQLite Database File
-    └── server.js           # Entry Point
-```
-
-## 🚀 Deployment Guide (GitHub Pages)
-
-The **Frontend** is configured to be deployed to GitHub Pages.
-The **Backend** cannot run on GitHub Pages and must be hosted specifically on a backend service (like Render, Railway, or a VPS).
-
-### 1. Preparation
-1. Open `labemanager-frontend/package.json`.
-2. Update the `"homepage"` field with your GitHub URL:
-   ```json
-   "homepage": "https://YOUR_USER.github.io/YOUR_REPO_NAME"
-   ```
-
-### 2. Deploying the Frontend
-Run the following command in the `labemanager-frontend` terminal:
-```bash
-npm run deploy
-```
-This will build the project and upload it to the `gh-pages` branch.
-
-### 3. Running Locally
-- **Backend:** `cd labemanager-backend` and run `npm start` (Runs on port 9090)
-- **Frontend:** `cd labemanager-frontend` and run `npm run dev`
-
-## Database
-The SQLite database is located at `labemanager-backend/data/database.sqlite`.
-The backend is configured to automatically connect to this file.
+Para executar o projeto localmente, o Backend deve ser iniciado acessando a pasta labemanager-backend e executando o comando npm start, o que fará a aplicação rodar na porta 9090. Em paralelo, o Frontend pode ser iniciado acessando a pasta labemanager-frontend e executando o comando npm run dev. O banco de dados utilizado pelo sistema é o SQLite, cujo arquivo está localizado em labemanager-backend/data/database.sqlite. O Backend já está previamente configurado para se conectar automaticamente a esse arquivo de banco de dados, não sendo necessária nenhuma configuração adicional para o funcionamento local do sistema.
