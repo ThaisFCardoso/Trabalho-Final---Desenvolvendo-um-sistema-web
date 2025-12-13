@@ -52,7 +52,7 @@ const login = (req, res) => {
             role: user.role,
             fullName: user.fullName,
             token: token
-        });
+        });//Ok
     });
 };
 

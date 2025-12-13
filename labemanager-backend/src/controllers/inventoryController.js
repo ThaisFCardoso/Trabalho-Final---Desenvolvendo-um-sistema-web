@@ -1,7 +1,7 @@
 const InventoryModel = require('../models/inventoryModel');
 
 const getTableFromPath = (req) => {
-    // Extract table name from route path, e.g., /api/almoxarifado -> almoxarifado
+    // Extraia o nome da tabela do caminho da rota, e.g., /api/almoxarifado -> almoxarifado
     const path = req.baseUrl.split('/').pop();
     return path;
 };

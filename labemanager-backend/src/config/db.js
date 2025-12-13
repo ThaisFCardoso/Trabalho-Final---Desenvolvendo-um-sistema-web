@@ -1,6 +1,6 @@
 // src/config/db.js
 const { createClient } = require('@libsql/client');
-
+//Estabelecendo cocnexão com o banco de dados
 const db = createClient({
   url: process.env.TURSO_DATABASE_URL,
   authToken: process.env.TURSO_AUTH_TOKEN,
