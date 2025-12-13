@@ -1,5 +1,3 @@
-// src/components/common/ArticleLine.jsx
-
 import React from 'react';
 import { FaPencilAlt } from 'react-icons/fa';
 
