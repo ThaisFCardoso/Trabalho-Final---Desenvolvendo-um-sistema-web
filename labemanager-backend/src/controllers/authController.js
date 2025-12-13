@@ -1,11 +1,8 @@
-//Imports
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const User = require('../models/userModel');
 
 const SECRET_KEY = 'labe_secret_key_super_secure';
-
-// Registro novos usuarios
 
 const register = (req, res) => {
     const { email, password, role, fullName } = req.body;
@@ -24,7 +21,6 @@ const register = (req, res) => {
         fullName
     };
 
-    //Insere usuario no BD
     User.createUser(newUser, function (err) {
         if (err) {
             if (err.message.includes('UNIQUE constraint failed')) {
@@ -36,7 +32,6 @@ const register = (req, res) => {
     });
 };
 
-//Autenticação do usuario
 const login = (req, res) => {
     const { email, password } = req.body;
 
